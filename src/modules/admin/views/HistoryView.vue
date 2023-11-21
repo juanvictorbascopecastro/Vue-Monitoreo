@@ -41,7 +41,7 @@
         :api-key="GOOGLE_MAPS_API_KEY"
         style="width: 100%; height: 600px"
         :center="center"
-        :zoom="13"
+        :zoom="14"
         ref="mapRef"
       >
         <!-- <Marker :options="{ position: center, label: 'Mi ubicacion' }" /> -->
@@ -104,7 +104,7 @@ export default {
       geodesic: true,
       strokeColor: "#FF0000",
       strokeOpacity: 1.0,
-      strokeWeight: 3,
+      strokeWeight: 8,
     });
 
     const changueEmployees = async () => {

@@ -18,6 +18,7 @@ import {
 import { swalProsgres, swalSmoll } from "../../../../helpers/alert-message";
 import { errorResponse } from "../../../../helpers/response-error";
 import { db } from "../../../../api/firebase";
+import Swal from "sweetalert2";
 
 export const load = async ({ commit }) => {
   try {
@@ -129,6 +130,7 @@ export const realTime = ({ rootGetters, commit }) => {
 };
 
 export const getHistory = ({ rootGetters }, values) => {
+  swalProsgres("Cargando datos...");
   const { idemployees, date } = values;
   const dateInit = new Date(date);
   const dateFin = new Date(date);
@@ -161,10 +163,12 @@ export const getHistory = ({ rootGetters }, values) => {
             },
           });
         });
+        Swal.close();
         resolve(list);
       })
       .catch((error) => {
         console.error("Error al realizar la consulta:", error);
+        Swal.close();
         reject(error);
       });
   });
