@@ -72,7 +72,7 @@
                   <img
                     :src="item.data.photo"
                     alt="Spotify"
-                    class="inline-block relative object-center !rounded-full w-12 h-12 border border-blue-gray-50 bg-blue-gray-50/50 object-contain"
+                    class="inline-block relative object-center !rounded-full w-12 h-12 border border-blue-gray-50 bg-blue-gray-50/50 object-cover"
                   />
                   <p
                     class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold"

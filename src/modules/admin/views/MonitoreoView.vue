@@ -1,5 +1,16 @@
 <template>
-  <div class="d-flex text-center" style="height: 50vh">
+  <div>
+    <div class="sm:flex sm:justify-between sm:items-center">
+      <h1 class="text-2xl font-bold">
+        MONITOREO DEL PERSONAL EMPREADO EN SERVICIO
+      </h1>
+      <!-- Right: Actions -->
+      <div
+        class="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2"
+      ></div>
+    </div>
+  </div>
+  <div class="d-flex text-center mt-3" style="height: 50vh">
     <GoogleMap
       :api-key="GOOGLE_MAPS_API_KEY"
       style="width: 100%; height: 500px"

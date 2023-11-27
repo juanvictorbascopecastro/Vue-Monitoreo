@@ -1,13 +1,31 @@
 <template>
   <div
-    style="min-height: 716px"
+    style="height: 100%"
     class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex"
   >
     <div class="px-8">
       <div class="h-16 w-full flex items-center text-red-600 font-bold">
         PINTURAS CARACOL
       </div>
-      <ul class="mt-12">
+      <div
+        class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200 dark:border-slate-700"
+      >
+        <div class="font-medium text-sm text-slate-800 dark:text-slate-100">
+          {{
+            $store.state.auth.user
+              ? $store.state.auth.user?.data?.name
+              : "Cargando..."
+          }}
+        </div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 italic">
+          {{
+            $store.state.auth.user
+              ? $store.state.auth.user?.data?.email
+              : "Cargando..."
+          }}
+        </div>
+      </div>
+      <ul class="mt-4">
         <li
           class="flex w-full justify-between cursor-pointer items-center mb-6"
           :class="{

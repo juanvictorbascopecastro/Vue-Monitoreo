@@ -30,7 +30,7 @@ export const load = async ({ commit }) => {
     querySnap.forEach((doc) => {
       list.push({ code: doc.id, data: doc.data() });
     });
-
+    console.log(list);
     commit("setList", list);
     return list;
   } catch (error) {
